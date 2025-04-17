@@ -12,8 +12,8 @@ const TabIcon = ({focused, icon, title}) => {
                 style={{
                     flexDirection: 'row',
                     minWidth: 112,
-                    minHeight: 64,
-                    marginTop: 4,
+                    minHeight: 56,
+                    marginTop: 17.5,
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 50,
@@ -30,7 +30,6 @@ const TabIcon = ({focused, icon, title}) => {
                 />
                 <Text 
                     style={{
-                        color: '#A8B5DB',
                         fontSize: 16,
                         fontWeight: "600",
                         marginLeft: 8
@@ -78,9 +77,9 @@ const _layout = () => {
                 borderRadius: 50,
                 marginHorizontal: 20,
                 marginBottom: 36,
-                height: 52,
+                height: 56,
                 position: "absolute",
-                overflow: "hidden",
+                // overflow: "hidden",
                 borderWidth: 1,
                 borderColor: "#0f0d23",
             }
@@ -102,20 +101,6 @@ const _layout = () => {
             }}
         />
         <Tabs.Screen
-            name="reports"
-            options={{
-                title: 'Reports',
-                headerShown: false,
-                tabBarIcon:({focused}) => (
-                    <TabIcon 
-                        focused={focused} 
-                        icon={icons.reports} 
-                        title="Reports"
-                    />
-                )
-            }}
-        />
-        <Tabs.Screen
             name="map"
             options={{
                 title: 'Map',
@@ -123,8 +108,24 @@ const _layout = () => {
                 tabBarIcon:({focused}) => (
                     <TabIcon 
                         focused={focused} 
-                        icon={icons.maps} 
+                        icon={icons.person}
+                        // icon={icons.map}
                         title="Maps"
+                    />
+                )
+            }}
+        />
+        <Tabs.Screen
+            name="cameraScreen"
+            options={{
+                title: 'CameraScreen',
+                headerShown: false,
+                tabBarIcon:({focused}) => (
+                    <TabIcon 
+                        focused={focused} 
+                        icon={icons.person}
+                        // icon={icons.camera}
+                        title="CameraScreen"
                     />
                 )
             }}
@@ -137,7 +138,8 @@ const _layout = () => {
                 tabBarIcon:({focused}) => (
                     <TabIcon 
                         focused={focused} 
-                        icon={icons.activities} 
+                        icon={icons.person}
+                        // icon={icons.activities}
                         title="Activities"
                     />
                 )
@@ -151,7 +153,8 @@ const _layout = () => {
                 tabBarIcon:({focused}) => (
                     <TabIcon 
                         focused={focused} 
-                        icon={icons.news} 
+                        icon={icons.person}
+                        // icon={icons.news}
                         title="News"
                     />
                 )
